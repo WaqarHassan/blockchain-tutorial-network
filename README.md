@@ -1,3 +1,2 @@
-# tutorial-network
-
-test
+# blockchain-tutorial-network
+IBM Hyperledger Composer Application
