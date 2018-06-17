@@ -1,0 +1,71 @@
+Arguments: 
+  /snap/node/743/bin/node /snap/node/743/bin/yarn.js global dir
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/waqar/.rvm/bin:/home/waqar/.rvm/bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  9.11.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, write
+      at Object.fs.writeSync (fs.js:750:20)
+      at SyncWriteStream._write (internal/fs.js:79:6)
+      at doWrite (_stream_writable.js:410:12)
+      at writeOrBuffer (_stream_writable.js:396:5)
+      at SyncWriteStream.Writable.write (_stream_writable.js:294:11)
+      at ConsoleReporter._log (/snap/node/743/lib/cli.js:94263:17)
+      at ConsoleReporter.log (/snap/node/743/lib/cli.js:94251:10)
+      at dir (/snap/node/743/lib/cli.js:35940:14)
+      at Object.<anonymous> (/snap/node/743/lib/cli.js:30355:25)
+      at Generator.next (<anonymous>)
+
+npm manifest: 
+  {
+    "engines": {
+      "composer": "^0.19.5"
+    },
+    "name": "tutorial-network",
+    "version": "0.0.1",
+    "description": "test",
+    "scripts": {
+      "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/tutorial-network.bna",
+      "pretest": "npm run lint",
+      "lint": "eslint .",
+      "test": "nyc mocha -t 0 test/*.js && cucumber-js"
+    },
+    "keywords": [
+      "composer",
+      "composer-network"
+    ],
+    "author": "waqar",
+    "email": "whassan25@gmail.com",
+    "license": "Apache-2.0",
+    "devDependencies": {
+      "composer-admin": "^0.19.5",
+      "composer-cli": "^0.19.5",
+      "composer-client": "^0.19.5",
+      "composer-common": "^0.19.5",
+      "composer-connector-embedded": "^0.19.5",
+      "composer-cucumber-steps": "^0.19.5",
+      "chai": "latest",
+      "chai-as-promised": "latest",
+      "cucumber": "^2.2.0",
+      "eslint": "latest",
+      "nyc": "latest",
+      "mkdirp": "latest",
+      "mocha": "latest"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
